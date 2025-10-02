@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lic. en Cs. de la Computación vs Ing. en Computación — Córdoba</title>
+<meta name="description" content="Informe comparativo y guía práctica: Licenciatura en Ciencias de la Computación (FaMAF–UNC) e Ingeniería en Computación (FCEFyN–UNC / UCC) en Córdoba, Argentina." />
+<style>
+  :root{
+    --bg:#0e0f12; --surface:#171923; --surface-2:#1f2230; --text:#e8eaf2; --muted:#a7b0c0; --brand:#7c9cff; --brand-2:#65d6a6; --danger:#ff8c8c; --ok:#a2ffb3; --border:#2a2f42; --shadow: 0 10px 30px rgba(0,0,0,.35);
+    --accent-1:#f7d14c; --accent-2:#b47cff; --accent-3:#4cd6a9;
+  }
+  [data-theme="light"]{ --bg:#f7f8fc; --surface:#ffffff; --surface-2:#eef1f8; --text:#171923; --muted:#4b5569; --brand:#2b59ff; --brand-2:#13b179; --danger:#d4293d; --ok:#0eae5a; --border:#dfe3ef; --shadow: 0 10px 24px rgba(27,39,94,.12); --accent-1:#f2c400; --accent-2:#9a6bff; --accent-3:#10b981; }
+  *{ box-sizing:border-box }
+  html,body{ height:100% }
+  body{ margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji"; background:var(--bg); color:var(--text) }
+  a{ color:var(--brand); text-decoration:none }
+  a:hover{ text-decoration:underline }
+  .container{ width:min(1120px, 100%); margin:0 auto; padding:0 20px }
+  header.nav{ position:sticky; top:0; z-index:50; backdrop-filter:saturate(150%) blur(10px); background:color-mix(in oklab, var(--surface), transparent 35%); border-bottom:1px solid var(--border) }
+  .nav-inner{ display:flex; align-items:center; justify-content:space-between; padding:10px 0 }
+  .brand{ display:flex; gap:12px; align-items:center; font-weight:700 }
+  .brand .logo{ width:32px; height:32px; border-radius:10px; background:conic-gradient(from 200deg, var(--brand), var(--brand-2)); box-shadow:inset 0 0 0 2px color-mix(in oklab, var(--surface), transparent 50%);}
+  nav ul{ display:flex; gap:18px; list-style:none; padding:0; margin:0; flex-wrap:wrap }
+  nav a{ padding:8px 10px; border-radius:10px }
+  nav a:hover{ background:var(--surface-2) }
+  .right-actions{ display:flex; gap:8px; align-items:center }
+  button, .btn{ border:0; background:var(--brand); color:white; padding:10px 14px; border-radius:12px; font-weight:600; cursor:pointer; box-shadow:var(--shadow) }
+  .btn.secondary{ background:var(--surface-2); color:var(--text); box-shadow:none; border:1px solid var(--border) }
+  .btn.ghost{ background:transparent; color:var(--text); border:1px solid var(--border) }
+  .hero{ padding:44px 0 24px; background: linear-gradient(180deg, color-mix(in oklab, var(--surface), transparent 20%), transparent); border-bottom:1px solid var(--border) }
+  .hero h1{ font-size:clamp(28px, 4vw, 40px); line-height:1.15; margin:8px 0 }
+  .hero p{ color:var(--muted); max-width:72ch }
+  .grid{ display:grid; gap:18px }
+  .grid.cols-2{ grid-template-columns:1fr; }
+  .grid.cols-3{ grid-template-columns:1fr; }
+  @media (min-width:880px){
+    .grid.cols-2{ grid-template-columns:1fr 1fr }
+    .grid.cols-3{ grid-template-columns:repeat(3, 1fr) }
+  }
+  .card{ background:var(--surface); border:1px solid var(--border); border-radius:18px; padding:18px; box-shadow:var(--shadow) }
+  h2{ font-size:clamp(22px, 3vw, 28px); margin:6px 0 10px }
+  h3{ font-size:clamp(18px, 2.4vw, 22px); margin:8px 0 }
+  .tag{ display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px; border:1px solid var(--border); background:var(--surface-2); color:var(--muted); font-weight:600; font-size:12px }
+  .kpi{ display:flex; gap:14px; align-items:center; padding:10px 12px; border:1px dashed var(--border); border-radius:14px; background:color-mix(in oklab, var(--surface), transparent 15%) }
+  .muted{ color:var(--muted) }
+  .list{ padding-left:18px }
+  /* + legibilidad en planes */
+  .list li{ margin:4px 0 }
+  .plan h4{ margin:10px 0 6px }
+  .plan{ column-gap:28px }
+  @media (min-width:880px){ .plan{ columns:2 } }
+  .callout{ border-left:4px solid var(--brand); padding:12px 14px; background:var(--surface-2); border-radius:12px }
+  .table{ width:100%; border-collapse:collapse; overflow:auto; display:block }
+  .table th, .table td{ border-bottom:1px solid var(--border); padding:10px 12px; text-align:left }
+  .table th{ color:var(--muted); font-weight:700 }
+  .pill{ display:inline-block; padding:.25rem .6rem; border-radius:999px; border:1px solid var(--border); background:var(--surface-2); font-size:12px }
+  .inline-kbd{ font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background:var(--surface-2); padding:.15rem .45rem; border-radius:6px; border:1px solid var(--border) }
+  details{ border:1px solid var(--border); border-radius:14px; padding:10px 12px; background:var(--surface); box-shadow:var(--shadow) }
+  details + details{ margin-top:12px }
+  summary{ cursor:pointer; font-weight:700 }
+  .two-col{ columns:1; column-gap:28px }
+  @media (min-width:880px){ .two-col{ columns:2 } }
+  footer{ margin:40px 0 80px; color:var(--muted); text-align:center }
+  .compare-badge{ font-weight:700; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--brand-2) }
+  .chiprow{ display:flex; flex-wrap:wrap; gap:8px }
+  .chip{ padding:6px 10px; border-radius:999px; background:var(--surface-2); border:1px solid var(--border); font-size:13px }
+  .highlight{ background: linear-gradient(120deg, color-mix(in oklab, var(--brand), transparent 70%), transparent 70%); border-radius:8px; padding:0 .25rem }
+  .search{ display:flex; gap:8px; align-items:center; background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:8px 10px }
+  .search input{ flex:1; background:transparent; border:0; color:var(--text); outline:none }
+  .badge{ border:1px solid var(--border); background:var(--surface-2); padding:4px 8px; border-radius:999px; font-size:12px; color:var(--muted) }
+  .note{ font-size:13px; color:var(--muted) }
+
+  /* Estadísticas estilo “dashboard” */
+  .stats-grid{ display:grid; gap:18px; grid-template-columns:1fr; }
+  @media (min-width:880px){ .stats-grid{ grid-template-columns:1fr 1fr } }
+  .stat-card{ background:linear-gradient(180deg, color-mix(in oklab, var(--surface), transparent 0%), color-mix(in oklab, var(--surface), transparent 10%)); border:1px solid var(--border); border-radius:22px; padding:22px; box-shadow:var(--shadow) }
+  .stat-title{ font-weight:800; font-size:clamp(18px,2.4vw,24px); margin:0 0 12px }
+  .stat-value{ font-weight:900; font-size:clamp(26px,4.2vw,40px); letter-spacing:.3px; margin:2px 0 14px }
+  .progress{ height:10px; background:color-mix(in oklab, var(--surface-2), transparent 10%); border-radius:999px; border:1px solid var(--border); overflow:hidden; }
+  .bar{ height:100%; width:0% }
+  .accent-1 .bar{ background:var(--accent-1); width:70% }
+  .accent-2 .bar{ background:var(--accent-2); width:88% }
+  .accent-3 .bar{ background:var(--accent-3); width:28% }
+  .source{ margin-top:10px; font-size:14px; color:var(--muted) }
+  .source a{ color:var(--brand) }
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="container nav-inner">
+    <div class="brand"><div class="logo" aria-hidden="true"></div><span>LCC vs Ing. en Computación — Córdoba</span></div>
+    <nav aria-label="Secciones">
+      <ul>
+        <li><a href="#intro">Inicio</a></li>
+        <li><a href="#lcc">Licenciatura (FaMAF–UNC)</a></li>
+        <li><a href="#ic">Ingeniería (UNC/UCC)</a></li>
+        <li><a href="#comparacion">Comparación</a></li>
+        <li><a href="#ingreso">Cómo se estudia</a></li>
+        <li><a href="#salidas">Salidas laborales</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="right-actions">
+      <button class="btn secondary" id="toggleTheme" title="Cambiar tema">🌓</button>
+      <button class="btn ghost" onclick="window.print()" title="Imprimir o guardar PDF">🖨️ PDF</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="intro">
+  <div class="container">
+    <span class="tag">Guía de Córdoba • Actualizada 2025</span>
+    <span class="tag" title="Autor del trabajo">Trabajo de: <strong>PEDRO CABEZAS</strong></span>
+
+    <h1>¿Licenciatura en <span class="highlight">Ciencias de la Computación</span> o <span class="highlight">Ingeniería en Computación</span>?</h1>
+    <p>Esta página es sobre dos carreras de mi interes <strong>explicando de cada una</strong> qué se estudia, cómo es el proceso de ingreso y cursado, y <strong>qué trabajos podés hacer</strong> durante y después de recibirte.</p>
+    <div class="grid cols-2" style="margin-top:18px">
+      <div class="kpi">📍 <strong>¿Dónde?</strong> FaMAF–UNC (LCC) · FCEFyN–UNC y UCC (Ing. en Comp.)</div>
+      <div class="kpi">⏳ <strong>Duración típica:</strong> 5 años (ambas)</div>
+    </div>
+  </div>
+</section>
+
+<main class="container" style="margin-top:26px">
+  <div class="search" role="search">
+    <span>🔎</span>
+    <input id="search" placeholder="Buscá temas: ingreso, IA, embebidos, redes, plan, etc."/>
+    <span class="badge" id="resultsCount">0 resultados</span>
+  </div>
+
+  <!-- LCC -->
+  <section id="lcc" style="margin-top:26px">
+    <div class="card">
+      <h2>Licenciatura en Ciencias de la Computación — <span class="muted">FaMAF · UNC</span></h2>
+      <p><span class="compare-badge">Enfoque</span> Perfil <strong>teórico–computacional</strong> orientado a fundamentos y ciencia de la computación (algoritmos, matemática, lógica, computabilidad), con aplicaciones en <strong>IA, optimización, seguridad, datos</strong> y desarrollo de software avanzado.</p>
+
+      <!-- NUEVO: Interés personal LCC -->
+      <div class="card" style="background:var(--surface-2); margin-top:12px">
+        <h3>Mi interés personal</h3>
+        <p>Me interesa porque se encarga principalmente del análisis, desarrollo, y otros procesos de sistemas informáticos y software, cosa que me interesa mucho debido a que me gusta programar. Siento que desde chiquito tengo presente la programación y el desarrollo de software y con el tiempo me interesa más para poder crear programas digitales.</p>
+      </div>
+
+      <!-- Entrevista LCC -->
+      <div class="card" style="background:var(--surface-2); margin-top:12px">
+        <h3>Entrevista recomendada</h3>
+        <p>🎥 <a href="https://youtu.be/gnOkfX3OgXo?si=Uplg3rBT1tAY2Xd_" target="_blank" rel="noopener">Ver entrevista sobre la Licenciatura en Ciencias de la Computación</a></p>
+      </div>
+
+      <div class="grid cols-2" style="margin-top:14px">
+        <div class="card" style="background:var(--surface-2)">
+          <h3>Qué se estudia</h3>
+          <ul class="list">
+            <li>Algoritmos y Estructuras de Datos I–II, Paradigmas de Programación</li>
+            <li>Matemática: Análisis I–II, Álgebra, Probabilidad y Estadística</li>
+            <li>Lógica, Lenguajes Formales y Computabilidad, Compiladores</li>
+            <li>Sistemas: Organización/Arquitectura, SO, Redes y Distribuidos</li>
+            <li>Métodos Numéricos, Modelos y Simulación; optativas: <em>IA, Redes Neuronales, Optimización, Microcontroladores</em></li>
+          </ul>
+        </div>
+        <div class="card" style="background:var(--surface-2)">
+          <h3>Habilidades que vas a desarrollar</h3>
+          <div class="chiprow">
+            <span class="chip">Pensamiento algorítmico</span>
+            <span class="chip">Modelado matemático</span>
+            <span class="chip">Diseño de software</span>
+            <span class="chip">Teoría de la computación</span>
+            <span class="chip">Bases de datos</span>
+            <span class="chip">Sistemas distribuidos</span>
+            <span class="chip">IA/ML (optativas)</span>
+          </div>
+        </div>
+      </div>
+
+      <details style="margin-top:12px">
+        <summary>Plan de estudios (completo por años/cuatrimestres)</summary>
+        <div class="plan">
+          <h4>Febrero</h4>
+          <ul class="list"><li>Curso de Nivelación</li></ul>
+
+          <h4>1.º año — 1.º cuatrimestre</h4>
+          <ul class="list">
+            <li>Introducción a los Algoritmos</li>
+            <li>Análisis Matemático I (LC – LMA – LHM)</li>
+            <li>Matemática Discreta I</li>
+          </ul>
+          <h4>1.º año — 2.º cuatrimestre</h4>
+          <ul class="list">
+            <li>Algoritmos y Estructuras de Datos I</li>
+            <li>Álgebra</li>
+            <li>Análisis Matemático II (LC)</li>
+          </ul>
+
+          <h4>2.º año — 1.º cuatrimestre</h4>
+          <ul class="list">
+            <li>Organización del Computador</li>
+            <li>Algoritmos y Estructuras de Datos II</li>
+            <li>Análisis Numérico</li>
+          </ul>
+          <h4>2.º año — 2.º cuatrimestre</h4>
+          <ul class="list">
+            <li>Probabilidad y Estadística</li>
+            <li>Introducción a la Lógica y la Computación</li>
+            <li>Sistemas Operativos</li>
+          </ul>
+
+          <h4>3.º año — 1.º cuatrimestre</h4>
+          <ul class="list">
+            <li>Redes y Sistemas Distribuidos</li>
+            <li>Paradigmas de Programación</li>
+            <li>Matemática Discreta II</li>
+          </ul>
+          <h4>3.º año — 2.º cuatrimestre</h4>
+          <ul class="list">
+            <li>Ingeniería del Software I</li>
+            <li>Bases de Datos</li>
+            <li>Arquitectura de Computadoras</li>
+          </ul>
+
+          <h4>4.º año — 1.º cuatrimestre</h4>
+          <ul class="list">
+            <li>Lenguajes Formales y Computabilidad</li>
+            <li>Modelos y Simulación</li>
+          </ul>
+          <h4>4.º año — 2.º cuatrimestre</h4>
+          <ul class="list">
+            <li>Física</li>
+            <li>Lógica</li>
+          </ul>
+
+          <h4>5.º año — Anual</h4>
+          <ul class="list"><li>Trabajo Especial</li></ul>
+          <h4>5.º año — 1.º cuatrimestre</h4>
+          <ul class="list">
+            <li>Lenguajes y Compiladores</li>
+            <li>Ingeniería del Software II</li>
+          </ul>
+          <h4>5.º año — 2.º cuatrimestre (Optativas)</h4>
+          <ul class="list">
+            <li>Álgebra Lineal Numérica</li>
+            <li>Inteligencia Artificial</li>
+            <li>Microcontroladores</li>
+            <li>Modelos Matemáticos en Finanzas Cuantitativas</li>
+            <li>Redes Neuronales</li>
+            <li>Métodos Computacionales en Optimización</li>
+          </ul>
+        </div>
+        <p class="note">Institución: FaMAF – Universidad Nacional de Córdoba. Duración estimada: 5 años.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Ingeniería en Computación -->
+  <section id="ic" style="margin-top:26px">
+    <div class="card">
+      <h2>Ingeniería en Computación — <span class="muted">FCEFyN · UNC</span> / <span class="muted">UCC</span></h2>
+      <p><span class="compare-badge">Enfoque</span> Perfil <strong>integrador hardware + software</strong>. Combina electrónica (analógica/digital, control, embebidos) con computación (SO, redes, bases, concurrencia, distribuidos, seguridad, IA) para crear <strong>sistemas ciberfísicos</strong> y soluciones tecnológicas completas.</p>
+
+      <!-- NUEVO: Interés personal Ingeniería -->
+      <div class="card" style="background:var(--surface-2); margin-top:12px">
+        <h3>Mi interés personal</h3>
+        <p>Me interesó porque siempre me gustó más el desarrollo de software pero en la expo le di una mirada a esta ingeniería que se encarga más del hardware complementado con el software, me interesó porque es una mirada más diferente que no tenía en cuenta antes que sigue relacionado con lo que me gusta pero es diferente a lo que me interesaba en el principio, poder traer ideas a lo físico y acompañarlo del desarrollo de software para que funcione.</p>
+      </div>
+
+      <!-- Entrevista Ingeniería -->
+      <div class="card" style="background:var(--surface-2); margin-top:12px">
+        <h3>Entrevista recomendada</h3>
+        <p>🎥 <a href="https://www.youtube.com/watch?v=gK_mxB_LTdY" target="_blank" rel="noopener">Ver entrevista sobre Ingeniería en Computación</a></p>
+      </div>
+
+      <div class="grid cols-2" style="margin-top:14px">
+        <div class="card" style="background:var(--surface-2)">
+          <h3>Qué se estudia</h3>
+          <ul class="list">
+            <li>Básicas: Matemática I–III, Física I–II, Probabilidad y Estadística</li>
+            <li>Software: Fundamentos, Estructuras de Datos, Programación Avanzada, Ing. de Software, Bases de Datos, SO, Concurrencia/Paralelismo, Distribuidos, Seguridad</li>
+            <li>Electrónica/Hardware: Digital I–III, Electrónica, Arquitectura de Computadoras, Sistemas Embebidos</li>
+            <li>Señales y Sistemas, Control I–II, Redes</li>
+            <li>Integración profesional: Calidad HW–SW, Práctica Profesional Integradora</li>
+          </ul>
+        </div>
+        <div class="card" style="background:var(--surface-2)">
+          <h3>Habilidades que vas a desarrollar</h3>
+          <div class="chiprow">
+            <span class="chip">Diseño HW–SW</span>
+            <span class="chip">Electrónica digital</span>
+            <span class="chip">Sistemas embebidos / IoT</span>
+            <span class="chip">Redes y ciberseguridad</span>
+            <span class="chip">Control y señales</span>
+            <span class="chip">Arquitectura de computadoras</span>
+            <span class="chip">Sistemas distribuidos</span>
+          </div>
+        </div>
+      </div>
+
+      <details style="margin-top:12px">
+        <summary>Plan de estudios (completo por semestres)</summary>
+        <div class="plan">
+          <h4>CINEU (Ingreso)</h4>
+          <ul class="list">
+            <li>1) Matemática</li>
+            <li>2) Física y Química</li>
+            <li>3) Ambientación Universitaria</li>
+          </ul>
+
+          <h4>1.º semestre</h4>
+          <ul class="list">
+            <li>4) Fundamentos de Programación (1)</li>
+            <li>5) Análisis Matemático 1 (5)</li>
+            <li>6) Taller y Laboratorio (1 y 3)</li>
+            <li>7) Estructuras Discretas (1)</li>
+          </ul>
+
+          <h4>2.º semestre</h4>
+          <ul class="list">
+            <li>8) Álgebra Lineal (1)</li>
+            <li>9) Física 1 (2 y 5)</li>
+            <li>10) Módulo de Inglés (5 asignaturas)</li>
+            <li>11) Fundamentos y Estructuras de Datos (4 y 7)</li>
+          </ul>
+
+          <h4>3.º semestre</h4>
+          <ul class="list">
+            <li>12) Análisis Matemático 2 (5 y 8)</li>
+            <li>13) Programación Avanzada (11)</li>
+            <li>14) Electrónica Digital 1 (4, 6 y 7)</li>
+            <li>15) Física 2 (8 y 9)</li>
+          </ul>
+
+          <h4>4.º semestre</h4>
+          <ul class="list">
+            <li>16) Electrónica Digital 2 (14)</li>
+            <li>17) Electrónica (6 y 15)</li>
+            <li>18) Análisis Matemático 3 (8)</li>
+            <li>19) Probabilidad y Estadística (5)</li>
+          </ul>
+
+          <h4>5.º semestre</h4>
+          <ul class="list">
+            <li>20) Bases de Datos (11)</li>
+            <li>21) Electrónica Digital 3 (13 y 16)</li>
+            <li>22) Ingeniería de Software y Hardware (13 y 16)</li>
+            <li>23) Señales y Sistemas (15 y 18)</li>
+          </ul>
+
+          <h4>6.º semestre</h4>
+          <ul class="list">
+            <li>24) Sistemas de Control 1 (23)</li>
+            <li>25) Redes de Computadoras (16)</li>
+            <li>26) Procesamiento de Señales (23)</li>
+            <li>27) Programación Concurrente y Paralela (13)</li>
+          </ul>
+
+          <h4>7.º semestre</h4>
+          <ul class="list">
+            <li>28) Sistemas Operativos (27)</li>
+            <li>29) Sistemas Embebidos (21)</li>
+            <li>30) Calidad de Software y Hardware-Software (22)</li>
+            <li>31) Inteligencia Artificial (22)</li>
+          </ul>
+
+          <h4>8.º semestre</h4>
+          <ul class="list">
+            <li>32) Seguridad Informática (30)</li>
+            <li>33) Sistemas Distribuidos (25 y 28)</li>
+            <li>34) Arquitectura de Computadoras (28)</li>
+            <li>35) Sistemas de Control 2 (24)</li>
+          </ul>
+
+          <h4>9.º semestre</h4>
+          <ul class="list">
+            <li>36) Sistemas Ciberfísicos (35)</li>
+            <li>37) Sistemas Informáticos (32)</li>
+            <li>38) Selectiva 1 (Según selectiva)</li>
+            <li>39) Selectiva 2 (Según selectiva)</li>
+          </ul>
+
+          <h4>10.º semestre</h4>
+          <ul class="list">
+            <li>40) Ingeniería Económica y Legal (22)</li>
+            <li>41) Higiene y Seguridad (30)</li>
+            <li>42) Práctica Profesional Integradora</li>
+          </ul>
+        </div>
+        <p class="note">Instituciones: FCEFyN–UNC (pública) y UCC (privada). Duración estimada: 5 años.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Comparación -->
+  <section id="comparacion" style="margin-top:26px">
+    <div class="card">
+      <h2>Comparación rápida: ¿en qué se diferencian?</h2>
+      <table class="table" id="compareTable">
+        <thead><tr><th>Aspecto</th><th>LCC (FaMAF–UNC)</th><th>Ing. en Computación (UNC/UCC)</th></tr></thead>
+        <tbody>
+          <tr><td>Foco principal</td><td>Fundamentos y ciencia de la computación; software e investigación</td><td>Integración HW–SW; sistemas embebidos, control, redes y seguridad</td></tr>
+          <tr><td>Perfil de cursado</td><td>Más teórico–matemático, con proyectos de software</td><td>Teórico + fuerte práctica en laboratorio de electrónica y sistemas</td></tr>
+          <tr><td>Materias distintivas</td><td>Lógica, Lenguajes Formales, Computabilidad, Compiladores</td><td>Electrónica Digital I–III, Señales y Sistemas, Control I–II, Embebidos</td></tr>
+          <tr><td>Optativas típicas</td><td>IA/ML, Optimización, Redes Neuronales, Microcontroladores</td><td>Ciberseguridad, Sistemas Ciberfísicos, Tiempo Real, IoT</td></tr>
+          <tr><td>Salida natural</td><td>Desarrollo de software avanzado, datos/ML, I+D</td><td>Diseño de dispositivos/sistemas, integración HW–SW, automatización</td></tr>
+          <tr><td>Instituciones en Córdoba</td><td>FaMAF – UNC</td><td>FCEFyN – UNC; UCC</td></tr>
+        </tbody>
+      </table>
+      <div class="callout" style="margin-top:12px">💡 <strong>Regla fácil:</strong> si tu interés principal es el <em>software profundo y la teoría</em>, LCC suele calzar mejor. Si te entusiasma construir <em>cosas físicas con electrónica</em> sin dejar de programar, la Ingeniería en Computación suele ser mejor match.</div>
+    </div>
+  </section>
+
+  <!-- Cómo se estudia -->
+  <section id="ingreso" style="margin-top:26px">
+    <div class="grid cols-2">
+      <div class="card">
+        <h2>Cómo se estudia • Ingreso y cursado</h2>
+        <h3>Ingreso</h3>
+        <ul class="list">
+          <li><strong>UNC (FaMAF/FCEFyN):</strong> Curso de nivelación/ambientación (matemática y herramientas de estudio). Requisitos generales de la UNC.</li>
+          <li><strong>UCC:</strong> Ingreso con ambientación universitaria y requisitos administrativos de universidad privada.</li>
+        </ul>
+        <h3>Duración y carga</h3>
+        <ul class="list">
+          <li><strong>Ambas:</strong> planificado en 5 años (10 semestres). El tiempo real depende del ritmo personal.</li>
+          <li><strong>Prácticas:</strong> en LCC, proyectos de software e investigación; en Ing., laboratorios de electrónica/sistemas y PPI.</li>
+        </ul>
+        <h3>Método de estudio</h3>
+        <ul class="list">
+          <li><strong>LCC:</strong> énfasis en teoría, demostraciones, algoritmos y proyectos de programación.</li>
+          <li><strong>Ing.:</strong> mezcla de teoría y práctica de laboratorio, integración HW–SW, trabajos prácticos con hardware.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Consejos de cursado</h2>
+        <ul class="list">
+          <li>Organizá la cursada por bloques: <span class="inline-kbd">mate/física</span> + <span class="inline-kbd">programación</span>.</li>
+          <li>Usá grupos de estudio y repositorios de apuntes.</li>
+          <li>Practicá con proyectos: en LCC, <em>algoritmia/IA</em>; en Ing., <em>embebidos/IoT</em>.</li>
+          <li>Combiná materias teóricas con una práctica para equilibrar la carga.</li>
+          <li>Buscá becas/ayudantías para ganar experiencia académica.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Salidas -->
+  <section id="salidas" style="margin-top:26px">
+    <div class="grid cols-2">
+      <div class="card">
+        <h2>¿En qué se trabaja durante la carrera?</h2>
+        <ul class="list">
+          <li><strong>LCC:</strong> pasantías en desarrollo de software, data/ML junior, ayudantías en cátedras; proyectos de investigación.</li>
+          <li><strong>Ing.:</strong> pasantías en laboratorios/electrónica/telecom, soporte a redes y seguridad, proyectos embebidos/IoT.</li>
+        </ul>
+        <h3>¿Y al recibirse?</h3>
+        <ul class="list">
+          <li><strong>LCC (ejemplos):</strong> dev backend/frontend, ingeniería de datos/ML, ciencia de datos, seguridad, I+D en universidades/centros, cómputo científico/fintech.</li>
+          <li><strong>Ing. (ejemplos):</strong> diseño de sistemas embebidos, automatización y control, arquitectura/seguridad de redes, tiempo real y sistemas distribuidos, integración HW–SW en automotriz, agro, salud.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Mapa de roles y áreas</h2>
+        <div class="grid cols-3">
+          <div class="card" style="background:var(--surface-2)">
+            <h3>Software</h3>
+            <div class="chiprow">
+              <span class="chip">Backend/Frontend</span>
+              <span class="chip">DevOps básico</span>
+              <span class="chip">Calidad/Testing</span>
+              <span class="chip">Mobile</span>
+            </div>
+          </div>
+          <div class="card" style="background:var(--surface-2)">
+            <h3>Datos e IA</h3>
+            <div class="chiprow">
+              <span class="chip">Data/ML</span>
+              <span class="chip">Ciencia de datos</span>
+              <span class="chip">Optimización</span>
+              <span class="chip">Seguridad</span>
+            </div>
+          </div>
+          <div class="card" style="background:var(--surface-2)">
+            <h3>HW & Sistemas</h3>
+            <div class="chiprow">
+              <span class="chip">Embebidos/IoT</span>
+              <span class="chip">Redes/Seguridad</span>
+              <span class="chip">Control</span>
+              <span class="chip">Tiempo real</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instituciones -->
+  <section id="instituciones" style="margin-top:26px">
+    <div class="card">
+      <h2>Instituciones y duración — Córdoba</h2>
+      <table class="table">
+        <thead><tr><th>Carrera</th><th>Institución</th><th>Gestión</th><th>Duración</th></tr></thead>
+        <tbody>
+          <tr><td>LCC</td><td>FaMAF – UNC</td><td>Pública</td><td>5 años</td></tr>
+          <tr><td>Ing. en Computación</td><td>FCEFyN – UNC</td><td>Pública</td><td>5 años</td></tr>
+          <tr><td>Ing. en Computación</td><td>UCC</td><td>Privada</td><td>5 años</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Nota: los planes pueden actualizarse. Verificá siempre la info oficial de cada facultad.</p>
+    </div>
+  </section>
+
+  <!-- Estadísticas -->
+  <section id="estadisticas" style="margin-top:26px">
+    <div class="card" style="background:transparent; border:none; box-shadow:none">
+      <h2 style="text-align:center; font-size:clamp(24px,3.2vw,34px)">Estadísticas en Argentina</h2>
+      <div class="stats-grid" style="margin-top:12px">
+        <!-- Salario SSI -->
+        <div class="stat-card accent-2">
+          <div class="stat-title">Salario promedio del sector de Software y Servicios Informáticos (SSI)</div>
+          <div class="stat-value">≈ $ 2.725.272 <span class="muted" style="font-weight:700; font-size:.65em">brutos • T1 2025</span></div>
+          <div class="progress"><div class="bar"></div></div>
+          <div class="source">Fuente: <a href="https://www.cessi.org.ar/" target="_blank" rel="noopener">CESSI/OPSSI</a>. Suele <strong>duplicar</strong> el promedio del sector privado registrado.</div>
+        </div>
+
+        <!-- Modalidad remota/híbrida -->
+        <div class="stat-card accent-3">
+          <div class="stat-title">Modalidad de trabajo en empresas de software (2024)</div>
+          <div class="stat-value">≈ 88% <span class="muted" style="font-weight:700; font-size:.65em">remoto o híbrido</span></div>
+          <div class="progress"><div class="bar"></div></div>
+          <div class="source">Fuente: <a href="https://www.cessi.org.ar/" target="_blank" rel="noopener">CESSI</a> y reportes sectoriales (tendencias de modalidad laboral en IT).</div>
+        </div>
+
+        <!-- Egreso en tiempo teórico -->
+        <div class="stat-card accent-1" style="grid-column:1 / -1">
+          <div class="stat-title">Tasa de egreso “a tiempo” (5 años) en carreras de grado</div>
+          <div class="stat-value">≈ 27,7% (total)</div>
+          <div class="progress"><div class="bar"></div></div>
+          <div class="source">Fuente: <a href="https://www.argentina.gob.ar/educacion/spu" target="_blank" rel="noopener">SPU – Ministerio de Educación</a> </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="margin-top:26px">
+    <div class="grid cols-2">
+      <details open>
+        <summary>¿Son lo mismo LCC y la Ingeniería en Computación?</summary>
+        <p>No. LCC se centra en la <em>ciencia</em> y la teoría del software (con mucha matemática y algoritmia) y la Ingeniería integra <em>hardware y software</em> para construir sistemas completos con electrónica, control y redes.</p>
+      </details>
+      <details>
+        <summary>Si me gusta IA, ¿cuál conviene?</summary>
+        <p>En LCC vas a ver más <em>fundamentos</em> matemáticos/teóricos de IA y optativas de ML. En Ingeniería también hay IA, pero su perfil es más de <em>aplicación en sistemas</em> (embebidos, tiempo real, ciberfísica).</p>
+      </details>
+      <details>
+        <summary>¿Puedo cambiarme de una a otra?</summary>
+        <p>Es posible, pero puede requerir equivalencias y replanificar materias. Lo ideal es decidir por <em>enfoque</em>: teoría/software vs integración HW–SW.</p>
+      </details>
+      <details>
+        <summary>¿Hay trabajo en Córdoba?</summary>
+        <p>Sí. Córdoba tiene ecosistema de software, electrónica y automotriz. Las dos carreras tienen buena inserción en la región y a nivel nacional.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Conclusión reflexiva -->
+  <section id="conclusion" style="margin-top:26px">
+    <div class="card">
+      <h2>Conclusión reflexiva</h2>
+      <p>Luego de investigar ambas carreras y analizar con mis resultados del cuadernillo <em>Proyectate</em>, reafirmo que tanto la <strong>Licenciatura en Ciencias de la Computación</strong> como la <strong>Ingeniería en Computación</strong> se ajustan fuertemente a mis <strong>intereses y habilidades</strong>. En Proyectate, los ítems más altos estuvieron vinculados al <strong>desarrollo tecnológico</strong>, la <strong>resolución de problemas</strong> y el <strong>pensamiento analítico</strong>, exactamente los ejes que atraviesan estas carreras.</p>
+      <p>La <strong>LCC</strong> dialoga con mi gusto de siempre por <em>programar</em> y con la motivación de profundizar en <strong>algoritmos, matemática, lógica e IA</strong> para construir software robusto y creativo. La <strong>Ingeniería en Computación</strong> complementa ese interés con la posibilidad de <strong>llevar ideas al mundo físico</strong> mediante la integración <em>hardware + software</em> , un enfoque que también me entusiasma.</p>
+      <p><strong>En mi cuardernillo</strong> deje claro que mi pasion era la tecnologia, y  las dos carreras son eso, porgramar, dasarrollar, investigar etc. es lo que me gusta y es el camino que quiero seguir, y con dos opciones parecidas pero diferentes a la vez tengo muchas posibilidades para saber por donde podria seguir aprendiendo.</p>
+      
+    </div>
+  </section>
+
+  <footer>
+    <p>Hecho para comparar  <strong>LCC</strong> (FaMAF–UNC) e <strong>Ingeniería en Computación</strong> (FCEFyN–UNC / UCC) en Córdoba. Última actualización: 2025.</p>
+  </footer>
+</main>
+
+<script>
+  // Tema (oscuro/claro)
+  const root = document.documentElement;
+  const saved = localStorage.getItem('theme');
+  if(saved){ root.setAttribute('data-theme', saved); }
+  document.getElementById('toggleTheme').addEventListener('click', ()=>{
+    const cur = root.getAttribute('data-theme')==='light' ? 'dark' : 'light';
+    root.setAttribute('data-theme', cur);
+    localStorage.setItem('theme', cur);
+  });
+
+  // Búsqueda simple por texto
+  const input = document.getElementById('search');
+  const count = document.getElementById('resultsCount');
+  const searchable = Array.from(document.querySelectorAll('section, .card, details'));
+  function doSearch(q){
+    let n = 0;
+    const needles = q.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    searchable.forEach(el=>{
+      if(!needles.length){ el.style.outline = 'none'; return; }
+      const hay = el.textContent.toLowerCase();
+      const hit = needles.every(t=> hay.includes(t));
+      el.style.outline = hit ? '2px solid var(--brand)' : 'none';
+      n += hit ? 1 : 0;
+    });
+    count.textContent = (needles.length? n : 0) + ' resultados';
+  }
+  input.addEventListener('input', e=> doSearch(e.target.value));
+
+  // Atajo de teclado para buscar
+  document.addEventListener('keydown', (e)=>{
+    if(e.key==='/' && document.activeElement!==input){ e.preventDefault(); input.focus(); }
+  });
+</script>
+</body>
+</html>
